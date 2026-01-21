@@ -1,6 +1,6 @@
-package Demos;
+package demos._1._5;
 
-public class Strings {
+public class Main {
     public static void main(String[] args) {
 
         String word1 = "computer";

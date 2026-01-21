@@ -1,4 +1,4 @@
-package Demos.Objects;
+package demos._1._4;
 
 public class School {
     public static void main(String[] args) {

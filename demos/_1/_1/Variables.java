@@ -1,4 +1,4 @@
-package Demos;
+package demos._1._1;
 
 public class Variables {
     public static void main(String[] args) {

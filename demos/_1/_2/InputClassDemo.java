@@ -1,4 +1,4 @@
-package Demos.Input;
+package demos._1._2;
 
 import java.util.Scanner;
 

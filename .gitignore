@@ -17,5 +17,4 @@
 !*.json
 !*.xml
 
-# Playground
-Playground.java
+miniquizzes/
