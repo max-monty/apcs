@@ -6,6 +6,8 @@ public class Strings {
         String word1 = "computer";
         String word2 = "science";
 
+        boolean b = word1.equals(word2); // don't use ==.... why?
+
         // length
         int length = word1.length();
         System.out.println("Length of word1: " + length);

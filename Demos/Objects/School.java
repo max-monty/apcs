@@ -8,9 +8,9 @@ public class School {
 
         Student customStudent = new Student("John Smith", 9);
 
-        System.out.println("Student: " + customStudent.getName() + ", Grade:" + customStudent.getGrade());
+        //System.out.println("Student: " + customStudent.getName() + ", Grade:" + customStudent.getGrade());
 
-        System.out.println(defaultStudent);
+        System.out.println(customStudent);
     }
     
 }
