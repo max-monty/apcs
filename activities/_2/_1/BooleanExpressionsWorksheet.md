@@ -55,7 +55,7 @@ In `AgeValidator.java`, write a program that:
 
 ### 4) Login Validator
 
-In `LoginValidator.java`:
+In `LoginValidator.java` (build this class yourself):
 
 1. Create two String variables for a stored username and password
 2. Ask the user to enter a username and password
@@ -72,7 +72,7 @@ In `LoginValidator.java`:
 
 ### 5) De Morgan's Practice
 
-In `DeMorgans.java`, for each of these expressions, write the equivalent using De Morgan's Law:
+Write the equivalent using De Morgan's Law:
 
 ```java
 // Original expressions - write the equivalent
@@ -85,13 +85,11 @@ int x = 5, y = 10;
 // 4. !(x == 5 || y != 10)  is equivalent to: _______________
 ```
 
-Write code that proves each pair is equivalent by printing both and showing they match.
+(Optional) Write code that proves each pair is equivalent by printing both and showing they match in DeMorgans.java (or just use pen and paper!).
 
 ---
 
 ### 6) Boolean Expression Simplifier
-
-In `BooleanSimplifier.java`:
 
 Given these conditions for a theme park ride:
 - `height` - person's height in inches
@@ -106,6 +104,8 @@ The ride requirements are:
 Write a single compound boolean expression `canRide` that captures all these rules.
 
 Then write the negation `cannotRide` using De Morgan's Law (don't just use `!canRide`).
+
+You can do this with pen and paper :)
 
 ---
 
@@ -129,7 +129,7 @@ A year is a leap year if:
 
 ### 8) Triangle Validator
 
-In `TriangleValidator.java`:
+In `TriangleValidator.java` (build this file yourself):
 
 1. Ask the user for three side lengths
 2. Determine if they can form a valid triangle (sum of any two sides must be greater than the third)
