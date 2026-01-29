@@ -103,9 +103,52 @@ In `ValidInput.java`:
 
 ---
 
+### 9) Password Creator
+
+In `PasswordCreator.java`:
+
+1. Ask the user to create a password
+2. The password must meet ALL of these requirements:
+   - At least 8 characters long
+   - Contains at least one digit (0-9)
+3. If the password doesn't meet the requirements, tell them what's missing and ask again
+4. Keep looping until they enter a valid password
+5. Print "Password accepted!" when done
+
+**Use a while loop** (you don't know how many attempts it will take)
+
+**Hint:** Use `.length()` to check length. To check for a digit, loop through each character and use `Character.isDigit(char)`.
+
+---
+
+### 10) Running Total
+
+In `RunningTotal.java`:
+
+1. Continuously ask the user for numbers to add to a running total
+2. After each number, print the current total
+3. If the user enters 0, stop the loop and print the final total
+4. The loop runs indefinitely until the user chooses to stop
+
+Example:
+```
+Enter a number (0 to quit): 5
+Total: 5
+Enter a number (0 to quit): 12
+Total: 17
+Enter a number (0 to quit): 3
+Total: 20
+Enter a number (0 to quit): 0
+Final total: 20
+```
+
+**Use a while loop** (the user decides when to stop)
+
+---
+
 ## Level 4: Challenge
 
-### 9) Prime Checker
+### 11) Prime Checker
 
 In `PrimeChecker.java`:
 
@@ -117,7 +160,7 @@ In `PrimeChecker.java`:
 
 ---
 
-### 10) Number Pyramid
+### 12) Number Pyramid
 
 In `Pyramid.java`:
 
