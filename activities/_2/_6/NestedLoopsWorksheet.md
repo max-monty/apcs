@@ -159,13 +159,13 @@ For size=5 (must be odd):
 
 In `PrimeGrid.java`:
 
-Print a grid where position (r,c) shows "P" if r*c is prime, "." otherwise.
+Print a grid where position (r,c) shows "P" if r + c is prime, "." otherwise.
 
 For 5×5:
 ```
-. . . . .
-. . P P P
-. P . . .
-. P . . .
-. P . . .
+. . P P .
+. P P . P
+P P . P .
+P . P . P
+. P . P .
 ```
