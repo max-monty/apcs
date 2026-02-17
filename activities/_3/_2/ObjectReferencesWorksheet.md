@@ -86,10 +86,11 @@ System.out.println(s.makeSale(w, 200.0)); // false
 
 In `ShoppingDriver.java`, write a program that:
 
-1. Creates 3 wallets with different balances
-2. Creates 2 stores
-3. Simulates several transactions (some that succeed, some that fail)
-4. After all transactions, prints:
+1. Have the user input a starting balance using Scanner.
+2. Creates 3 wallets with different balances (use the user input for one of the balances)
+3. Creates 2 stores
+4. Simulates several transactions (some that succeed, some that fail)
+5. After all transactions, prints:
    - Each wallet's final balance
    - Each store's total revenue
    - Which wallet has the highest remaining balance
