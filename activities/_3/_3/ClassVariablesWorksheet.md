@@ -44,7 +44,11 @@ System.out.println("Max: " + User.MAX_USERS);           // 100
 
 ### 4) Constructor Guard
 
-Modify the constructor so that if `userCount >= MAX_USERS`, the username is set to `"DENIED"` and `isActive` is set to `false` (the user is not really created, but the object still exists).
+Modify the constructor so that:
+- If `userCount >= MAX_USERS`, the username is set to `"DENIED"` and `isActive` is set to `false` (the user is not really created, but the object still exists)
+- If the username is fewer than 3 characters or contains a space, set `username` to `"invalid"` and `isActive` to `false`
+
+**Hint:** Use `.length()` and `.contains(" ")` to validate the username.
 
 ### 5) Active Counter
 
@@ -84,8 +88,8 @@ System.out.println(g2);
 
 In `UserDriver.java`, write a program that:
 
-1. Creates 5 named users
-2. Creates 3 guest users using `createGuest()`
+1. Uses a `Scanner` in a **while loop** to let the user register accounts by typing usernames (type `"quit"` to stop)
+2. Creates 2 guest users using `createGuest()`
 3. Deactivates 2 users
 4. Prints:
    - Total user count

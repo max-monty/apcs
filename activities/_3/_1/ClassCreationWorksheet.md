@@ -57,8 +57,10 @@ Add a non-void method `boolean isAtTarget()` that returns `true` if `currentTemp
 ### 6) Set Mode
 
 Add a void method `void setMode(String mode)` that:
-- If `mode` is `"heat"`, sets `isHeating` to true
-- If `mode` is `"cool"`, sets `isHeating` to false
+- If `mode` is `"heat"` (case-insensitive), sets `isHeating` to true
+- If `mode` is `"cool"` (case-insensitive), sets `isHeating` to false
+
+**Hint:** Use `.equalsIgnoreCase()` so inputs like `"HEAT"` or `"Cool"` also work.
 
 ---
 
@@ -85,15 +87,22 @@ Add an overloaded method `adjustTemp` that:
 
 In `ThermostatDriver.java`, write a program that:
 
-1. Creates two thermostats:
+1. Uses a `Scanner` to ask the user for:
+   - A target temperature (as a `double`)
+   - A mode (`"heat"` or `"cool"`)
+2. Creates two thermostats:
    - One using the default constructor
-   - One set to current: 60.0, target: 72.0, heating: true
-2. Uses a loop to call `adjustTemp()` on each thermostat until both reach their target
-3. Prints the state of each thermostat after every adjustment step
+   - One using the user's input (set `currentTemp` to 60.0 for heat mode, or 85.0 for cool mode)
+3. Uses a while loop to call `adjustTemp()` on each thermostat until both reach their target
+4. Prints the state of each thermostat after every adjustment step
+5. After the simulation, prints how many total steps it took
 
 Example output:
 ```
+Enter target temperature (50-90): 72.0
+Enter mode (heat/cool): heat
 Step 1: Thermostat [current: 70.0, target: 70.0, heating: false] | Thermostat [current: 61.0, target: 72.0, heating: true]
 Step 2: Thermostat [current: 70.0, target: 70.0, heating: false] | Thermostat [current: 62.0, target: 72.0, heating: true]
 ...
+Done in 12 steps.
 ```

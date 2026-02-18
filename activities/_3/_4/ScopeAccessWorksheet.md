@@ -120,4 +120,7 @@ Design and implement a class of your choice that uses **all** of the following:
 
 Ideas: `Song`, `Recipe`, `GameCharacter`, `Planet`, `Smartphone`
 
-Write both the class and a driver that demonstrates every feature.
+Write both the class and a driver that demonstrates every feature. In your driver:
+- Use `Scanner` to let the user create at least one object with custom values
+- Store at least 3 objects in an **array** and use a **for loop** to print them all
+- Use a loop to find the "best" object by some criteria (like finding the max in an array)

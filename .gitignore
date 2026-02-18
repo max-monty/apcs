@@ -9,3 +9,5 @@
 !*.xml
 miniquizzes/
 files/
+.claude/
+demos/Scratchpad.java

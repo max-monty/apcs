@@ -86,14 +86,11 @@ System.out.println(s.makeSale(w, 200.0)); // false
 
 In `ShoppingDriver.java`, write a program that:
 
-1. Have the user input a starting balance using Scanner.
-2. Creates 3 wallets with different balances (use the user input for one of the balances)
-3. Creates 2 stores
-4. Simulates several transactions (some that succeed, some that fail)
-5. After all transactions, prints:
-   - Each wallet's final balance
-   - Each store's total revenue
-   - Which wallet has the highest remaining balance
-   - Which wallet has the lowest remaining balance
+1. Use a `Scanner` to ask the user for a starting balance, then store 3 wallets in a `Wallet[]` array (use the user's input for one of the balances) and 2 stores in a `Store[]` array
+2. Uses a **for loop** to print each wallet's starting balance
+3. Simulates several transactions (some that succeed, some that fail)
+4. After all transactions, use a **for loop** to print each wallet's final balance and each store's total revenue
+5. Use the **find-max algorithm** (from Unit 2) to loop through the wallet array and find which wallet has the highest remaining balance
+6. Use the **find-min algorithm** to find which wallet has the lowest remaining balance
 
-**Hint:** To find the richest wallet, compare balances using `getBalance()` and keep track of the reference to the wallet with the highest value.
+**Hint:** To find the richest wallet, loop through the array, compare balances using `getBalance()`, and keep track of the index (or reference) of the wallet with the highest value — just like finding the max in an `int[]`.
