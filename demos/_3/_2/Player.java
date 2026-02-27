@@ -21,7 +21,7 @@ public class Player {
 
     // --- Modifying a passed object (object reference as parameter) ---
     public void transferScoreTo(Player other) {
-        other.score += score;
+        other.score += this.score;
         score = 0;
     }
 
