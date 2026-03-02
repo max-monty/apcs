@@ -19,36 +19,7 @@ Luhn's algorithm works on the string of digits from **right to left**:
 2. If doubling a digit produces a value ≥ 10, **subtract 9** from it (equivalently,
    add the two resulting digits together: 18 → 1 + 8 = 9).
 3. Sum all the digits (both the doubled/adjusted ones and the untouched ones).
-4. If the total **modulo 10 equals 0**, the number is valid.
-
-### Worked Example
-
-Card number: `4003600000000014`
-
-Write the digits right-to-left and label alternating positions:
-
-```
-Position (1-indexed from right):  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16
-Digit:                             4  1  0  0  0  0  0  0  0  0  6  3  0  0  4  (wait — see below)
-```
-
-Let's do it step by step with the actual number:
-
-```
-Digits:    4  0  0  3  6  0  0  0  0  0  0  0  0  0  1  4
-           ^                                              ^
-         index 0                                      index 15
-```
-
-- Odd positions from the right (index 15, 13, 11, … from right = positions 1, 3, 5…):
-  leave unchanged → `4, 0, 0, 0, 0, 0, 3, 0` ... (every other starting from last)
-- Even positions from the right: double them, subtract 9 if ≥ 10.
-
-Sum = 20, 20 % 10 = 0 → **VALID**
-
-> **Important:** You are working with a `String`. Use `charAt(i) - '0'` to get the
-> integer value of each character digit. **Do not use `Long.parseLong` or `Integer
-> .parseInt` on the whole number** — some valid card numbers are too large for `long`.
+4. If the total is divisible by 10, the number is valid.
 
 ---
 
@@ -110,35 +81,6 @@ If the number fails Luhn's check: output `INVALID`.
 ### Sample 7 — All zeros (edge case)
 **Input:** `0000000000000000`
 **Output:** `INVALID`
-
----
-
-## Puzzle Twist: No Numeric Conversion
-
-You **may not** use `Long.parseLong()`, `Integer.parseInt()`, or any numeric parsing
-on the full card number string. Every digit must be extracted character-by-character.
-
-This means your Luhn loop will look something like:
-
-```java
-for (int i = number.length() - 1; i >= 0; i--) {
-    int digit = number.charAt(i) - '0';
-    // ... alternate doubling logic based on position from right
-}
-```
-
-Track whether a position is "even from the right" or "odd from the right" using a
-counter or by checking `(number.length() - 1 - i) % 2`.
-
----
-
-## Suggested Development Order
-
-1. Write and test `allDigits(String s)` — loop through every character.
-2. Write and test `isValid(String number)` with the worked example above.
-   Print the running sum at each step to verify.
-3. Write and test `cardType(String number)` with `startsWith()` and `length()`.
-4. Connect everything in `main`.
 
 ---
 
