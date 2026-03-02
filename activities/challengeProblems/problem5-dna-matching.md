@@ -73,37 +73,6 @@ int findMatch(int[] profile)
 
 ---
 
-## Implementing `longestRun`
-
-This is the core challenge. The naive approach — check every position, count forwards —
-works but requires careful index management.
-
-**Algorithm for `longestRun(String dna, String str)`:**
-
-```
-max = 0
-i = 0
-while i < dna.length():
-    if dna starting at i contains str:
-        count = 0
-        while dna starting at i contains str:
-            count++
-            i += str.length()      // advance past this occurrence
-        max = max(max, count)
-    else:
-        i++                        // advance one character
-return max
-```
-
-**Key insight:** When you find a run of consecutive repeats, you must advance `i` by
-`str.length()` each time (not by 1) to avoid overlapping matches. When the run breaks,
-advance by 1 to look for a new run starting later.
-
-Use `dna.startsWith(str, i)` or `dna.substring(i).startsWith(str)` to check for a
-match at position `i`.
-
----
-
 ## Sample Inputs and Outputs
 
 ### Sample 1 — Alice
@@ -160,30 +129,6 @@ Computed profile: `{ 3, 2, 2, 2 }` — no row in DATABASE matches.
 
 ---
 
-## Worked Example: `longestRun`
-
-Call: `longestRun("AGATCAGATCTTAGATC", "AGATC")`
-
-```
-i=0:  "AGATCAGATCTTAGATC".startsWith("AGATC", 0) → true
-      count=1, i=5
-i=5:  .startsWith("AGATC", 5) → true
-      count=2, i=10
-i=10: .startsWith("AGATC", 10) → false ("TT...")
-      max = max(0, 2) = 2
-      i++ → i=11
-...   (no more runs)
-      
-i=12: .startsWith("AGATC", 12) → true
-      count=1, i=17
-i=17: loop ends (17 >= length 17)
-      max = max(2, 1) = 2
-
-Return: 2
-```
-
----
-
 ## Puzzle Twist: Careful Indexing
 
 The naive approach of scanning character-by-character and using `indexOf` or a nested
@@ -222,11 +167,6 @@ these cases:
 
 ## Extension Challenges
 
-- **Read data from CSV format:** Accept the database as lines of input
-  (`Alice,2,8,3,7`) rather than hard-coded arrays.
 - **Multiple matches:** If more than one person matches, print all matching names.
 - **Partial match reporting:** Print how many STRs each person matched, sorted by
   match count, even when no complete match is found.
-- **Efficiency:** For very long DNA strings (millions of characters), your current
-  algorithm is O(n × m × k) where n = DNA length, m = STR length, k = number of STRs.
-  Can you reduce the constant factor with smarter indexing?
