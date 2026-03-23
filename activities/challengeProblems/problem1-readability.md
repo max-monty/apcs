@@ -27,7 +27,7 @@ index = 0.0588 * L − 0.296 * S − 15.8
   separator.
 - **Sentences** — any sequence ending in `.`, `!`, or `?`. A sentence-ending punctuation
   mark always ends exactly one sentence, even if followed by another punctuation mark
-  (`...` = 1 sentence, `?!` = 2 sentences... wait, actually count each `.`, `!`, `?`
+  (`?!` = 2 sentences. Count each `.`, `!`, `?`
   character individually).
 
 > **Clarification on sentences:** Count every occurrence of `.`, `!`, or `?` in the
