@@ -43,12 +43,35 @@ Your program will receive:
 
 ```java
 String[] DICTIONARY = {
-    "the", "and", "to", "of", "a", "in", "is", "it", "you", "that",
-    "he", "was", "for", "on", "are", "as", "with", "his", "they", "at",
-    "be", "this", "from", "or", "one", "have", "an", "by", "but", "not",
-    "had", "her", "she", "all", "there", "been", "when", "who", "will",
-    "would", "said", "each", "which", "do", "their", "what", "so", "up"
-};
+        "the", "and", "to", "of", "a", "in", "is", "it", "you", "that",
+        "he", "was", "for", "on", "are", "as", "with", "his", "they", "at",
+        "be", "this", "from", "or", "one", "have", "an", "by", "but", "not",
+        "had", "her", "she", "all", "there", "been", "when", "who", "will",
+        "would", "said", "each", "which", "do", "their", "what", "so", "up",
+        "old", "man", "told", "him", "about", "going", "place", "them",
+        "were", "first", "if",
+        "i", "my", "me", "we", "us", "our", "no", "yes", "did", "has",
+        "can", "may", "its", "how", "than", "then", "now", "out", "just",
+        "also", "into", "could", "come", "made", "after", "back", "only",
+        "new", "some", "time", "very", "your", "way", "any", "more",
+        "other", "like", "over", "such", "here", "take", "most", "too",
+        "well", "where", "much", "down", "should", "still", "get", "own",
+        "even", "make", "good", "give", "people", "before", "two", "work",
+        "long", "day", "see", "look", "think", "know", "many", "great",
+        "while", "right", "same", "through", "say", "last", "might",
+        "never", "every", "between", "under", "must", "another",
+        "am", "if", "go", "off", "put", "let", "set", "few", "end",
+        "got", "yet", "why", "men", "run", "too", "big", "far", "tell",
+        "keep", "help", "hand", "away", "left", "life", "home", "need",
+        "head", "went", "came", "find", "want", "use",
+        "found", "called", "used", "being", "again", "began", "took",
+        "asked", "three", "house", "world", "part", "small", "those",
+        "thing", "though", "without", "nothing", "upon", "whole",
+        "enough", "almost", "however", "once", "side", "both",
+        "next", "always", "point", "turn", "until", "number",
+        "young", "eyes", "against", "night", "left", "above",
+        "name", "little", "year", "face", "done", "seen"
+    };
 ```
 
 ---
@@ -93,7 +116,7 @@ void swapMapping(char[] mapping, int i, int j)
 2. **Decode and score:** Call `applyMapping` and `scoreCandidate` on the initial guess.
    Store this as your `bestScore` and `bestPlaintext`.
 
-3. **Hill-climb (at least 500 iterations):** In a loop:
+3. **Hill-climb (at least 5000 iterations):** In a loop:
    - Pick two random ciphertext letter indices `i` and `j`.
    - Swap their plaintext assignments using `swapMapping`.
    - Decode the ciphertext and score it.
@@ -107,11 +130,11 @@ void swapMapping(char[] mapping, int i, int j)
 
 ```
 Mapping:
-A -> e
-B -> t
-C -> a
+A -> k
+B -> m
+C -> j
 ...
-Z -> q
+Z -> d
 
 Decoded:
 <best guess plaintext here>
@@ -126,19 +149,19 @@ was uppercase, the decoded character should be uppercase; if lowercase, lowercas
 
 ### Sample Input
 ```
-Zsi bpnn vf eyxvdm vf bvzs bpm jxmibmiz xvlpmi bpib wvl kwevlz, ib bpm sbvxa nwcm vf bpmq.
+ekt xsz bqo yqpz ekqe kt ixvsz oxe kqht mtto ektrt pg ykt kqz oxe exsz kpb qmxve ekt xot ikx iqy fxpof ex mt ipek qss xg ektb grxb ekpy nsqjt qoz ektd itrt oxe yqpz ex kqht mtto ekt gprye.
 ```
 
 ### Sample Output (approximate — yours may vary)
 ```
 Mapping:
-A -> f
-B -> w
+A -> k
+B -> m
 ...
-Z -> t
+Z -> d
 
 Decoded:
-The will of doing is with the greatest riches that you count, at the above love of them.
+"the old man said that he would not have been there if she had not told him about the one who was going to be with all of them from this place and they were not said to have been the first."
 ```
 
 *(Because hill-climbing is randomized, your exact output may differ slightly, but the

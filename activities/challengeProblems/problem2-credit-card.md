@@ -40,7 +40,7 @@ If the number fails Luhn's check: output `INVALID`.
 
 ## Requirements
 
-1. Read the card number as a `String` (use `Scanner.next()`).
+1. Read the card number as a `String`.
 2. **Reject immediately** (output `INVALID`) if the input contains any non-digit
    character, including spaces, hyphens, or letters.
 3. Implement a `boolean isValid(String number)` method that runs Luhn's algorithm.

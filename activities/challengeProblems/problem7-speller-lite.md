@@ -7,7 +7,7 @@ In this problem you'll build one from scratch — without using Java's `HashSet`
 `HashMap`. Instead, you'll implement your own fast lookup structure using either
 **binary search on a sorted array** or a **bucket-based structure** using an
 `ArrayList<ArrayList<String>>`. The goal is to understand *why* data structures matter
-for performance, not just how to use built-in ones.
+for performance, not just how to use built-in ones. Because you are using such a small dictionary, you will get a lot of words back that register as misspellings, even if they are correctly spelled. 
 
 ---
 
@@ -18,7 +18,7 @@ for performance, not just how to use built-in ones.
 3. For each word in the passage, **normalize** it (lowercase, strip surrounding
    punctuation), then **look it up** in your dictionary.
 4. Output all misspelled words in **alphabetical order** (unique — don't repeat the
-   same word twice), along with summary statistics.
+   same word twice). Output the word count, including duplicates. If "dog" appears twice, count it as two words.
 
 ---
 
@@ -177,7 +177,7 @@ dog
 needs
 walk
 
-WORDS IN TEXT:  9
+WORDS IN TEXT:  10
 MISSPELLINGS:   3
 ```
 

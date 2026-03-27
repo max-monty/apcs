@@ -48,7 +48,7 @@ In `GradebookDriver.java`, add a method:
 public static Student findTopStudent(Student[] roster)
 ```
 
-Return the `Student` with the highest grade. Use the **find-max pattern** — initialize with the first element and compare using `getGrade()`.
+Return the `Student` with the highest grade. 
 
 Test: Should return `Alice: 92`
 
@@ -61,7 +61,7 @@ Add a method:
 public static Student findByName(Student[] roster, String name)
 ```
 
-Return the `Student` whose name matches (use `.equals()` — review from Unit 1). Return `null` if not found.
+Return the `Student` whose name matches (use `.equals()`). Return `null` if not found.
 
 Test: `findByName(roster, "Charlie")` → `Charlie: 55`
 Test: `findByName(roster, "Zara")` → `null`
@@ -75,7 +75,7 @@ Add a method:
 public static int countPassing(Student[] roster)
 ```
 
-Return how many students have a grade of 60 or above. Use the **count pattern** with an enhanced for loop.
+Return how many students have a grade of 60 or above. Use an enhanced for loop.
 
 ---
 
@@ -88,7 +88,6 @@ Add a method:
 public static double classAverage(Student[] roster)
 ```
 
-Return the average grade of all students. Remember to **cast** the sum to `double` before dividing (review from Unit 1).
 
 ---
 
@@ -99,7 +98,7 @@ Add a method:
 public static boolean allPassing(Student[] roster)
 ```
 
-Return `true` if ALL students have a grade of 60 or above. Use the **check-all pattern**: start with `true`, set to `false` if any student fails the condition.
+
 
 ---
 
@@ -112,7 +111,6 @@ public static String[] honorRoll(Student[] roster)
 
 Return a new `String[]` containing the **names** of all students with grades 90 or above.
 
-**Hint:** First count how many qualify (to determine the size of the new array), then create and fill it in a second pass.
 
 ---
 
@@ -138,19 +136,8 @@ Add a method:
 public static void sortByGrade(Student[] roster)
 ```
 
-Sort the array from **highest to lowest** grade using a nested loop. For each pair that is out of order, swap them using a `Student temp` variable.
+Sort the array from **highest to lowest** grade using a nested loop. For each pair that is out of order, swap them.
 
-(Review: nested loops from Unit 2)
-
-```java
-// Selection sort pattern:
-for (int i = 0; i < roster.length - 1; i++) {
-    for (int j = i + 1; j < roster.length; j++) {
-        if (roster[j].getGrade() > roster[i].getGrade()) {
-            // swap roster[i] and roster[j]
-        }
-    }
-}
 ```
 
 Print the sorted roster.

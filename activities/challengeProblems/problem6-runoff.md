@@ -41,33 +41,14 @@ int[] votes;                  // current round first-choice vote counts
 
 ## Input Format
 
-```
-<number of candidates>
-<candidate name 1>
-<candidate name 2>
-...
-<number of voters>
-<voter 1 ranking: name name name ...>
-<voter 2 ranking: name name name ...>
-...
-```
+Input will be one large `String` starting with the number of candidates followed by a space, then each candidates name followed by a space, then the number of voters followed by a space, then each voters ordered ranking of candidates separated by spaces.
 
-Voters enter their full ranking as space-separated candidate names. Convert names to
-indices when storing in `preferences`.
+Convert names to indices when storing in `preferences`.
 
 ### Sample Input
 
 ```
-3
-Alice
-Bob
-Charlie
-5
-Alice Bob Charlie
-Charlie Alice Bob
-Bob Charlie Alice
-Alice Charlie Bob
-Charlie Bob Alice
+3 Alice Bob Charlie 5 Alice Bob Charlie Charlie Alice Bob Bob Charlie Alice Alice Charlie Bob Charlie Bob Alice
 ```
 
 ---
@@ -163,14 +144,7 @@ Charlie
 ### Sample 2 — Tie
 **Input:**
 ```
-2
-Alice
-Bob
-4
-Alice Bob
-Alice Bob
-Bob Alice
-Bob Alice
+2 Alice Bob 4 Alice Bob Alice Bob Bob Alice Bob Alice
 ```
 
 **Round 1:**
@@ -187,18 +161,7 @@ Bob
 ### Sample 3 — Multiple Elimination Rounds
 **Input:**
 ```
-4
-Alice
-Bob
-Charlie
-Diana
-6
-Alice Bob Charlie Diana
-Bob Alice Charlie Diana
-Charlie Bob Alice Diana
-Diana Alice Bob Charlie
-Alice Charlie Bob Diana
-Bob Charlie Alice Diana
+4 Alice Bob Charlie Diana 6 Alice Bob Charlie Diana Bob Alice Charlie Diana Charlie Bob Alice Diana Diana Alice Bob Charlie Alice Charlie Bob Diana Bob Charlie Alice Diana
 ```
 
 Work through this yourself! Hint: Diana gets 1 first-choice vote in round 1.

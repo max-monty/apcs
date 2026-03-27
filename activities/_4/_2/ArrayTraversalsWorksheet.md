@@ -184,7 +184,6 @@ Use an **indexed for loop**. Create and return a **new** `String[]` where every 
 (Review: `.toUpperCase()` from Unit 1)
 
 **Think:** Why must `toUpperAll` use an indexed for loop instead of an enhanced for loop?
-(Hint: assigning a new value to the enhanced for variable does NOT change the array.)
 
 ---
 
@@ -219,4 +218,3 @@ public static int countAbove(double[] grades, double threshold)
 ```
 Return how many grades are above the threshold.
 
-**Hint:** For methods that need both parallel arrays, you need an **indexed for loop** so you can access the same index in both arrays simultaneously.
