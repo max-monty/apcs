@@ -113,7 +113,6 @@ public class DNAMatching {
         Scanner db = new Scanner(new File("database.txt"));
         String[] strs = db.nextLine().split(" ");
 
-        // TODO: read names and counts into parallel arrays
         // There are 5 people and 4 STRs.
         String[] names = new String[5];
         int[] agatcCounts = new int[5];
