@@ -1,8 +1,8 @@
 # Vibe Coding
 
-A 6-class module after the AP exam. You'll spend a week-ish learning to build software with AI, then ship a web app to the internet that's actually yours.
+A 4-class module after the AP exam, plus a wrap-up day. You'll learn to build software with AI as your partner, then ship a real web app to the internet.
 
-By the end of Day 6 you'll have:
+By the end of class 4 you'll have:
 - A live URL anyone can visit
 - That project on your public GitHub
 - Learned the prompt → run → iterate → commit → push loop of modern AI-driven software development
@@ -12,24 +12,13 @@ By the end of Day 6 you'll have:
 
 ## The schedule
 
-| Day | Focus | What you leave with |
-|---|---|---|
-| 1 | Setup + first deploy | A "Hello, [your name]" page live at your own URL |
-| 2 | Build a real app together | A personality quiz of your own theme, deployed |
-| 3 | Pick + plan + start your project | A brief, a starting version of your project, deployed |
-| 4 | Build day | Must-haves working, deployed |
-| 5 | Polish & ship | Demo-ready: named, polished, README'd |
-| 6 | Demos | Show your project, play everyone else's |
+| Class | Part        | Focus                                | What you leave with                                  |
+| ----- | ----------- | ------------------------------------ | ---------------------------------------------------- |
+| 1     | **Setup**   | Accounts + tools + your first deploy | A "Hello, [your name]" page live at your own URL     |
+| 2     | **Build**   | Pick + plan + scaffold               | A brief, a starter version of your project, deployed |
+| 3     | **Build**   | Build day                            | Must-haves working                                   |
+| 4     | **Ship**    | Polish + final deploy                | Demo-ready: named, polished, README'd, submitted     |
 
----
-
-## Before Day 1 (do this at home, ~15 min)
-
-1. **Install Cursor:** [cursor.com](https://cursor.com) → Download. Install like any Mac app.
-2. **Make a GitHub account:** [github.com](https://github.com). Use a personal email — you'll keep this through college and into your career. Pick a username you'd be okay seeing on a résumé (your name, not `xX_dragon420_Xx`). This is the URL of your portfolio for the next decade.
-3. **Sign in to Cursor with the same email as GitHub.** If you have a school `.edu` email, also visit [cursor.com/students](https://cursor.com/students) for 1 year of Cursor Pro free. Otherwise you'll get a 2-week Pro trial that covers our whole module.
-
-If anything breaks, don't panic. We'll fix it Day 1.
 
 ---
 
@@ -45,94 +34,56 @@ You're not coding the way you did all year in AP CS. You're working *with* an AI
 
 The AI brings everything else: the language, the framework, the file structure, the syntax, the libraries.
 
-The single most important rule of vibe coding: describe outcomes, not implementations. Tell the AI what users should see, feel, and do. Let it figure out *how*.
+The single most important rule of vibe coding: describe outcomes, and provide guidance regarding implementations when necessary. Tell the AI what users should see, feel, and do. Work together to figure out *how*.
 
 ---
 
-## Day 1 — From zero to live URL
+## Part 1 — Setup (Class 1)
 
-The most important hour of the module. Goal: by the end of class, you have a public URL that says "Hello, [your name]" — and every time you push a change, your URL updates within 30 seconds.
+The most important class of the module. **One goal:** every student leaves with a public URL that says "Hello, [your name]" — and every push updates it in ~30 seconds.
 
-What we'll do together:
+### Step 1 — Accounts
 
-1. Make sure everyone is signed in to Cursor, GitHub, and Vercel. (Sign in to Vercel with **Continue with GitHub** — fewer accounts.)
-2. On github.com → New repo `my-vibe-site` (Public, "Add a README" ✓, Create).
-3. In Cursor: `Cmd+Shift+P` → "Git: Clone" → paste the GitHub URL.
-4. Open the chat (`Cmd+L`) and prompt:
+Three accounts, one email. Use a **personal** email (you'll keep this past graduation).
+
+1. **GitHub** — [github.com](https://github.com) → Sign up. Pick a username you'd be okay seeing on a résumé (your name, not `xX_dragon420_Xx`). This is the URL of your portfolio for the next decade. Verify your email.
+2. **Cursor** — [cursor.com](https://cursor.com) → Download → install. Open it. Sign in with the **same email** as GitHub. With a school `.edu` email, also visit [cursor.com/students](https://cursor.com/students) for a free year of Pro.
+3. **Vercel** — [vercel.com](https://vercel.com) → Sign up → **Continue with GitHub** (don't make a new account). Authorize it.
+
+### Step 2 — Your first live URL
+
+We'll all do these together.
+
+1. On github.com → **New repo** → name it `my-vibe-site` → Public → ✓ "Add a README" → Create.
+2. In Cursor: `Cmd+Shift+P` → type `Git: Clone` → paste your repo URL → pick a folder.
+3. Open the chat (`Cmd+L`) and paste:
 
    > Create an `index.html` that says "Hello, [my name]" in big text on a fun gradient background. Centered, modern look. Plain HTML/CSS in one file.
 
-5. Open `index.html` in a browser. Looks good?
-6. **Push to GitHub** from Cursor's Source Control sidebar: stage → commit "first page" → push.
-7. **Deploy to Vercel:** vercel.com → Add New Project → Import → `my-vibe-site` → Deploy. URL appears in ~30 sec. Open it. **That's your site, on the internet.**
-8. **The magic edit.** Prompt Cursor:
+   Replace `[my name]` with your actual name. Hit enter. Accept the changes.
 
-   > Add a button that, when clicked, changes the gradient to a random new color combo.
+4. Double-click `index.html` from your file explorer to open it in a browser. Looks good? ✓
+5. **Push it.** Cursor's Source Control sidebar (left edge) → hover the changed file → `+` to stage → type a commit message like `first page` → click ✓ Commit → click ⋯ → Push. First time Cursor will pop open a browser to log into GitHub — accept.
+6. **Deploy it.** vercel.com → Add New → Project → Import `my-vibe-site` → Deploy. Wait ~30 sec. Click the URL Vercel gives you.
 
-9. Save → commit → push → watch Vercel auto-deploy → refresh your live URL → it's there.
+   **That's your site, on the internet.** Send it to someone.
+### Step 3 — Feel the loop 
 
-That's the loop. Everything else this module is variations on it.
+Run the loop once so it clicks. In Cursor:
 
----
+> Add a button that, when clicked, changes the gradient to a random new color combo.
 
-## Day 2 — Build a real app together
+Save → Source Control → stage → commit `color button` → push. Wait 30 seconds. Refresh your live URL. **Your change is live for the whole internet.**
 
-Today we build a personality quiz end-to-end. Everyone copies the same prompts at first, then re-themes the quiz to whatever you want — Marvel hero, dog breed, pizza topping, Hogwarts house, your friend group, anything.
+That's the loop. Everything in Parts 2 and 3 is variations on it.
 
-Make a new repo `my-personality-quiz`. Clone, open in Cursor, open chat (`Cmd+L`).
-
-### Prompt 1 — Scaffold
-
-> Build a single-file `index.html` personality quiz called "What kind of pizza are you?".
->
-> - 4 questions, each with 4 multiple-choice answers (big tappable buttons).
-> - After question 4, score the answers and show ONE of:
->   • Pepperoni — bold, classic, never wrong
->   • Margherita — simple, elegant, always in style
->   • Hawaiian — controversial, loved by some
->   • Pineapple-haters Pineapple — chaotic, confident, has opinions
-> - Each result has an emoji and a 1–2 sentence funny description.
-> - A "Take it again" button on the result screen.
->
-> Style: modern, fun, big colorful buttons, smooth fade between questions.
-> Tech: plain HTML, CSS, JavaScript in ONE file. No frameworks, no external libraries.
-
-Read what Cursor produces. You don't need to understand every line — but find the questions array, find where the result is decided, see the shape.
-
-### Prompt 2 — Fix a bug (only if something's broken)
-
-> [Paste the actual error or describe what's broken.]
-> Expected: clicking an answer advances to the next question.
-> Actual: nothing happens.
-> Fix it.
-
-### Prompt 3 — Re-theme
-
-> Change the theme of this quiz from pizza to "[your theme]".
-> Update:
-> - The title
-> - All 4 questions and 16 answers (same structure)
-> - The 4 results (new emojis and descriptions)
-> - The color palette to match the new vibe
->
-> Don't change any of the quiz logic, buttons, or layout.
-
-### Prompt 4 — One stretch (pick one)
-
-> A: Add a progress bar at the top that fills as the user answers.
->
-> B: On the result screen, add a "Share my result" button that copies a shareable link to clipboard. Show a "Copied!" toast for 2 seconds.
->
-> C: When the result appears, trigger a confetti animation. Use a small inline canvas-based confetti, no external libraries.
-
-Push to GitHub, import to Vercel, get a URL. Text it to a friend. Make them take the quiz. That's a real product, made by you, in one class.
+**Stretch (if you finish early):** prompt for one more thing — make your name type itself out, add emoji rain on click, hide an easter egg. Then commit + push + refresh.
 
 ---
 
-## Days 3, 4, 5 — Your project
+## Part 2 — Build your project (Classes 2 & 3)
 
-Three classes building something you actually want to build, in a stack the AI helps you pick.
-
+Two classes building something you actually want to build.
 ### 1. Pick something you actually want to build
 
 The best projects come from "I wish ___ existed" or "wouldn't it be funny if ___."
@@ -146,18 +97,10 @@ Prompts to find an idea:
 
 If you're stuck, skim [Project ideas](#project-ideas) at the bottom — but use them as starting points, not a menu. Customize. Make it about something *you* care about.
 
-**The acid test.** Before you commit:
-1. Could I describe this to my grandma in one sentence?
-2. Would I actually use it / send it to one specific person?
-3. Could I get a basic version working in a single sitting?
-
-If yes to all three, build it.
-
 **Constraints (so you don't over-scope):**
 - It must run in a web browser
-- It should not require user accounts/login (auth is a tar pit — skip)
-- You must be able to ship a working version in three classes
-
+- It should not require user accounts/login 
+- You must be able to ship a working version in two classes
 ### 2. Write a one-pager
 
 New folder, open in Cursor, create `BRIEF.md`:
@@ -166,7 +109,7 @@ New folder, open in Cursor, create `BRIEF.md`:
 # [Project Name]
 
 ## What it is (one sentence)
-It's a __ that lets you __.
+
 
 ## Who it's for
 [Yourself? A specific person? A specific kind of person? Be honest.]
@@ -193,7 +136,7 @@ Read it out loud to a partner. They should be able to repeat back what you're bu
 
 In Cursor, type `@BRIEF.md` to attach your brief, then:
 
-> Read my brief. Recommend a stack and project structure. I'm a high school student who's never built a web app — optimize for: I want every line readable to me, I want to ship in 3 class hours + an evening, I'll deploy to Vercel. What do you suggest, and why?
+> Read my brief. Recommend a stack and project structure. I'm a high school student who's never built a web app — optimize for: I want every line readable to me, I want to ship in 2 class hours + an evening, I'll deploy to Vercel. What do you suggest, and why?
 
 If it suggests something you don't recognize ("Tailwind", "Vite", "component"), ask:
 
@@ -208,17 +151,33 @@ When you've decided:
 
 > Let's go with [your choice]. Build the smallest version that does ONLY my must-haves. Make it work end-to-end before making it pretty.
 
-Run it. Push to GitHub. Import to Vercel. **You're now on the internet.** Even if it's ugly and minimal. Knowing you'll finish is half the battle.
+Run it. Push to GitHub. Import to Vercel. **You're now on the internet.** Even if it's ugly and minimal. From now on every push auto-deploys — you'll be using your live URL as your testing surface.
 
-### 4. Build (Day 4)
+### 4. Build → test → iterate
+
+This is the rhythm for every minute of the rest of Part 2:
+
+```
+Prompt (one idea) → Run it → Read what changed → Use it like a user → Commit when it works → Next prompt
+                                                       ↓
+                                          If broken: be specific about the gap
+```
+
+**Habits that separate finished projects from stuck ones:**
 
 | Habit | Why |
 |---|---|
 | Read what the AI wrote, even when it works | You can't debug code you've never seen |
-| Commit small and often (every 15–20 min when something works) | You can roll back when the AI breaks something |
 | Run the code every few prompts | Don't accumulate broken changes you can't see |
+| Commit small and often (every 15–20 min when something works) | You can roll back when the AI breaks something |
+| One idea per prompt | Bundling three asks is a recipe for a rewrite of half your project |
 | Update `BRIEF.md` when plans change | If you drop a feature or pivot, write it down |
 | Ask "why" when you don't understand | The AI is an expert — use it as one |
+
+**How to test what you just built:**
+- Use the thing the way a real user would. Click every button. Try empty input. Try wrong input. Refresh mid-flow.
+- If you find a bug, write down *exactly* what you did and what you expected before asking the AI to fix it. Vague descriptions get vague fixes.
+- After every commit, open your live URL (not just localhost) — sometimes things break only after deploy.
 
 **When stuck:**
 
@@ -228,15 +187,23 @@ Run it. Push to GitHub. Import to Vercel. **You're now on the internet.** Even i
 - *"I don't know what to build next."* Open `BRIEF.md`. Which must-have is least done? Build that.
 - *"I'm not understanding the code anymore."* Ask: *"Give me a one-paragraph summary of what each file is doing and how they connect."*
 
-### 5. Polish & ship (Day 5)
+By the end of Class 3, your three must-haves should work end-to-end. It doesn't need to be pretty. It needs to do the thing.
 
-By Day 5 your must-haves work. Now:
+---
 
-1. **Fix the one most embarrassing bug.** You know what it is.
-2. **Visual polish.** *"Improve the visual design without changing features. Cohesive palette fitting [your theme], better typography, subtle hover animations."*
-3. **One bit of delight.** Sound on a key click, confetti moment, hidden easter egg, mascot that reacts. *"Add [delight] when [trigger]."*
-4. **Rename your Vercel URL.** Vercel dashboard → Settings → Domains → so it's `<projectname>.vercel.app` instead of random.
-5. **Add a `README.md`** to your repo:
+## Part 3 — Ship (Class 4)
+
+Your project works.
+
+1. **Fix the one most bug.** 
+
+2. **Visual polish.** Prompt:
+
+   > Improve the visual design without changing features. Cohesive palette fitting [your theme], better typography, subtle hover animations.
+
+3. **Rename your Vercel URL.** Vercel dashboard → your project → Settings → Domains → so it's `<projectname>.vercel.app` instead of `<projectname>-3kj2-max.vercel.app`.
+
+4. **Write a real `README.md`** at the root of your repo:
 
    ```markdown
    # [Project Name]
@@ -255,28 +222,16 @@ By Day 5 your must-haves work. Now:
    ![Screenshot](screenshot.png)
    ```
 
-6. **Add a screenshot.** `Cmd+Shift+4` to capture, save as `screenshot.png` in your repo.
-7. **Final commit and push.** Verify the live URL works.
+5. **Add a screenshot.** `Cmd+Shift+4` to capture, save as `screenshot.png` in your repo root.
 
----
+6. **Final commit and push.** Now the test: open the live URL on your **phone**. Does it work? Hand your phone to the person next to you. Does it work for them? If yes, you've shipped.
 
-## Day 6 — Demo
+### Submit
 
-Each person presents in ~2 minutes:
+Paste two URLs into the class showcase doc:
 
-1. **One sentence: what it is.** ("It's a __ that lets you __.")
-2. **Show the live site.** Open the URL on the projector, click around, demo the main feature.
-3. **One thing you're proud of.**
-4. **One thing that was hard.** Be honest — where did the AI fail you? Where did *you* fail you?
-
-While someone else is demoing, you're not on your laptop. Look up.
-
-After demos, everyone plays everyone's apps. Open the class URL list, try at least 5 classmates' projects. When you find something cool, **tell the person directly.** "I love that you added X."
-
-**To turn it in,** paste two things into the class showcase doc:
-
-1. **Live URL** (`https://your-project.vercel.app`)
-2. **GitHub repo URL** (`https://github.com/your-username/your-repo`)
+1. **Live URL** (`https://<your-project>.vercel.app`)
+2. **GitHub repo URL** (`https://github.com/<you>/<your-repo>`)
 
 That's submission. No file uploads, no zips, no PDFs.
 
@@ -291,9 +246,7 @@ That's submission. No file uploads, no zips, no PDFs.
 
 Pass = both. That's the whole rubric.
 
-If your project isn't deployed by Day 6, that's the only way to miss this — talk to me before the deadline so we fix it together.
-
-**Don't optimize for the rubric.** Optimize for making something you'd want to remember years from now. The artifact matters more than the grade.
+If your project isn't deployed by end of Class 4, that's the only way to miss this — talk to me before the deadline so we fix it together.
 
 ---
 
@@ -301,15 +254,15 @@ If your project isn't deployed by Day 6, that's the only way to miss this — ta
 
 ### Cursor essentials
 
-| Action | Shortcut |
-|---|---|
-| Open AI chat | `Cmd+L` |
-| Inline edit highlighted code | `Cmd+K` |
-| Open terminal | `` Cmd+` `` |
-| Source Control sidebar | sidebar icon — use this, not the terminal |
-| Switch model | bottom-right of chat — `Auto` is unlimited free |
-| Quick open file | `Cmd+P` |
-| Command palette | `Cmd+Shift+P` |
+| Action                       | Shortcut                                        |
+| ---------------------------- | ----------------------------------------------- |
+| Open AI chat                 | `Cmd+L`                                         |
+| Inline edit highlighted code | `Cmd+K`                                         |
+| Open terminal                | `` Cmd+` ``                                     |
+| Source Control sidebar       | sidebar icon — use this, not the terminal       |
+| Switch model                 | bottom-right of chat — `Auto` is unlimited free |
+| Quick open file              | `Cmd+P`                                         |
+| Command palette              | `Cmd+Shift+P`                                   |
 
 **Three rules:**
 1. Read code before accepting. If unclear, ask "explain this."
@@ -371,70 +324,80 @@ You can do all of this from Cursor's Source Control sidebar (no terminal needed)
 
 ## Project ideas
 
-A starting list. **Don't pick one verbatim** — customize, twist, make it about something you care about.
+Don't pick one verbatim. Just ideas.
 
-### Tools that pretend to be fun
-- Tip calculator where the math is presented as song lyrics
-- Pomodoro timer where the break plays a clip from your favorite YouTuber
-- Random restaurant picker for specifically your town
-- Decision wheel — type options, spin, pick
-- Habit tracker for one habit, not 50
-- Countdown to your birthday / summer / a specific concert
-- Tier-list maker — drag movies/songs/foods into S/A/B/C/D
-- Group chooser — "who pays for dinner?" with names
-- Workout shuffler with a 10-minute home routine
-- Cheat sheet for a class (AP Bio terms, AP Stats formulas) but actually nice to look at
+### AI-powered apps
+The AI isn't just your engineer — it can be a feature. Use the OpenAI / Anthropic / Gemini API (free tiers cover a demo) to build things that were impossible two years ago.
 
-### Games
-- Clicker game with upgrades, themed to your interest
-- Memory match using your friends' faces, not cards
-- Wordle clone with a custom word list (Pokémon names? friend nicknames?)
-- Reaction-time tester (click when the screen turns green)
-- Snake / Pong / Breakout heavily themed
-- Idle / incremental ("grow your tomato empire")
-- Speed-typing test with prompts from your favorite book
-- One-button game — the whole thing is one button. What does pressing it do?
-- Dice roller for D&D with animations
+- **Roast my Spotify** — paste a playlist link → AI roasts (or compliments) your taste in the voice of Anthony Bourdain / Pitchfork / your strictest teacher.
+- **Anonymous compliment generator** — friend types your name, AI writes a heartfelt note in the voice of someone who knows them.
+- **AI rap battle** — pick two characters + a topic, get a 4-bar battle.
+- **Live closed-captions, but funny** — browser speech-to-text → AI rewrites it as Shakespeare / a sports announcer / a court reporter.
+- **An AI editor for one specific thing** — Common App essays, DMs that need help, your AP Lit thesis.
+- **"What would [character] say about my day?"** — paste your day, get a reaction in the voice you pick.
 
-### Generators
-- Compliment / roast / pickup-line with mood selector
-- Fake startup idea generator ("Uber for X, but Y")
-- D&D character / Pokémon team / aesthetic playlist title
-- Magic 8-ball with custom answers
-- Outfit randomizer pulling from a list you customize
-- Random workout / random recipe / random study technique
+### Games with real depth
+Not single-screen clickers — games someone would actually finish.
 
-### Quizzes & personality tests
-- "What kind of [X] are you?" — pick any noun
-- Compatibility quiz between two friends
-- Niche knowledge quiz ("How well do you know [show / school inside jokes]?")
-- A multi-ending choose-your-own-adventure (5 scenes, 2 endings)
+- **Real-time multiplayer drawing/guessing** with a friend over a shared URL (PeerJS handles peer-to-peer — no server).
+- **A platformer where you draw your own levels** mid-play.
+- **A physics sandbox** — drag objects, gravity + collisions + chain reactions.
+- **Chess against a real engine** (chess.js + stockfish). Custom theme — your cat is the king.
+- **Daily Wordle** with a custom word list and a shareable result image friends will actually post.
 
-### Visual / weird / artistic
-- Drawing pad with color picker + save as image
-- ASCII art generator — type a word, get fancy ASCII
-- Color palette generator from a vibe word ("autumn," "cyberpunk")
-- Mood board — drag and arrange images
-- A simulator of a totally mundane thing — toast, a stoplight, a vending machine
-- A page that's a love letter to a movie, a feeling, a place
-- Generative art that changes each load
+### Generative art, music, and creative tools
+The browser is a canvas. The Web Audio API is a synthesizer. Both are wildly underused.
 
-### Personal / portfolio
-- About-me page that's weird and fun, not a résumé
-- Photo gallery of one specific thing — your dog, your sneakers, sunsets
-- A page for someone you love (birthday card, going-away gift, just-because)
-- List of your favorite things — top 10 movies, songs, video games
+- **Music sequencer** — tap a 16-step grid to compose a beat. Export the audio.
+- **Visual synthesizer** — your voice or a song controls a real-time visual.
+- **Drum machine where your voice is the kick** — record samples in browser, sequence them.
+- **Fractal explorer** — pan + zoom into the Mandelbrot set forever.
+- **3D scene you can walk around** (Three.js) — a floating island, your bedroom, your own planet.
+- **Lyric video generator** — paste lyrics + a beat → animated lyric video.
+- **Constellation viewer** — the actual sky over your location tonight.
+- **Generative [poetry / posters / jewelry]** — refresh the page, get something new and good.
 
-### Stretch (for the ambitious)
-- Anything above + a real public API (`wttr.in` weather, `dog.ceo` photos, public Pokémon API)
-- Anything above as a Next.js app — Cursor scaffolds it, deploy still works
-- localStorage so progress / scores persist across visits
-- A page that uses your camera or microphone — fun to demo
+### Real-time + real data
+Pull live data. Visualize it beautifully.
 
----
+- **Live ISS tracker** with a 3D rotating Earth.
+- **Live earthquake monitor** — a sound on every tremor in the last hour.
+- **"Where in the world is it raining"** globe, updating in real time.
+- **Spotify Wrapped, but right now** — paste a playlist, get a beautiful one-page vibe recap.
+- **Live flight globe** — every commercial flight in the air, right now.
+- **Today's weather as a vibe** — fetch weather, play a matching playlist, paint the scene.
+- **1980s news ticker** — but it's live stock prices, crypto, or your friends' Instagram follow counts.
 
-## After this module
+### Webcam + microphone experiments
+Sensor access is demo gold. Friends remember these.
 
-Your `vercel.app` URL stays live as long as you don't delete it. Your GitHub repo stays public. That means **for the rest of your life**, you can text someone the URL of a thing you made in high school. You can put it on a college application. You can put it on a résumé. You can show it to your kids someday and they'll be horrified by the design.
+- **Webcam → ASCII / pixel art / glitch art** in real time.
+- **Face filter** — turn your face into a meme avatar or stick a moving mustache on it.
+- **Voice-controlled anything** — say "left," your character moves left. Browser speech recognition.
+- **Reaction-cam recorder** — records you watching a YouTube clip, plays them side by side.
+- **"Blink to advance"** slideshow / story / game.
+- **A live mood ring for your room** — listens, paints colors based on what it hears.
+- **Floating AR text** that follows your head around the screen.
 
-The hardest part of being a developer is starting. You started.
+### Tools that actually solve a real problem
+The bar: someone uses it within a week without you reminding them.
+
+- **Notes-to-flashcards** — paste your AP Bio notes, get a spaced-repetition quiz.
+- **"What should I cook"** — list what's in your fridge + restrictions → real recipes.
+- **Receipt splitter** — itemized, everyone clicks what they ordered, math handled.
+- **College decision dashboard** — list schools, rank, see stats vs. each, compare side-by-side.
+- **Lyric translator** — paste foreign lyrics → translated + transliterated karaoke text.
+- **Group decision wheel** — share a link, friends drop options in from their phones, spin together.
+- **Chore divider** for your house or group project, with fairness math.
+- **A studying-vs-procrastinating timer** that screenshots what's on your screen at random intervals.
+
+### Personal, weird, portfolio
+A page on the internet that says something only *you* would make.
+
+- **A digital time capsule** that unlocks on a future date.
+- **A senior yearbook page** every classmate adds a memory to (Google Sheet as the backend — no auth needed).
+- **A page that watches you back** — webcam tracks your face, the page reacts to where you look.
+- **A "send me a postcard"** page — visitors leave a 10-second audio clip + a doodle.
+- **A love letter** to a movie / a feeling / a place — designed like it belongs in a museum.
+- **A fake OS desktop** you can interact with — draggable windows, fake terminal, hidden apps.
+- **A spiritual successor to a website you loved as a kid** that no longer exists.
