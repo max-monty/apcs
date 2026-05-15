@@ -73,7 +73,7 @@ Run the loop once so it clicks. In Cursor:
 
 > Add a button that, when clicked, changes the gradient to a random new color combo.
 
-Save → Source Control → stage → commit `color button` → push. Wait 30 seconds. Refresh your live URL. **Your change is live for the whole internet.**
+Save → Source Control → stage → commit `Add color button` → push. Wait 30 seconds. Refresh your live URL. **Your change is live for the whole internet.**
 
 That's the loop. Everything in Parts 2 and 3 is variations on it.
 
