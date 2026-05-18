@@ -47,7 +47,7 @@ The most important class of the module. **One goal:** every student leaves with 
 Three accounts, one email. Use a **personal** email (you'll keep this past graduation).
 
 1. **GitHub** — [github.com](https://github.com) → Sign up. Pick a username you'd be okay seeing on a résumé (your name, not `xX_dragon420_Xx`). This is the URL of your portfolio for the next decade. Verify your email.
-2. **Cursor** — [cursor.com](https://cursor.com) → Download → install. Open it. Sign in with the **same email** as GitHub. With a school `.edu` email, also visit [cursor.com/students](https://cursor.com/students) for a free year of Pro.
+2. **Cursor** — [cursor.com](https://cursor.com) → Download → install. Open it. Sign in with the **same email** as GitHub. Visit [cursor.com/students](https://cursor.com/students) and use your `.edu` email for a free year of Pro.
 3. **Vercel** — [vercel.com](https://vercel.com) → Sign up → **Continue with GitHub** (don't make a new account). Authorize it.
 
 ### Step 2 — Your first live URL
