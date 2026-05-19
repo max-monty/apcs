@@ -46,34 +46,38 @@ The most important class of the module. **One goal:** every student leaves with 
 
 Three accounts, one email. Use a **personal** email (you'll keep this past graduation).
 
-1. **GitHub** — [github.com](https://github.com) → Sign up. Pick a username you'd be okay seeing on a résumé (your name, not `xX_dragon420_Xx`). This is the URL of your portfolio for the next decade. Verify your email.
-2. **Cursor** — [cursor.com](https://cursor.com) → Download → install. Open it. Sign in with the **same email** as GitHub. With a school `.edu` email, also visit [cursor.com/students](https://cursor.com/students) for a free year of Pro.
+1. **GitHub** — [github.com](https://github.com) → Sign up. Pick a username. Verify your email.
+2. **Cursor** — [cursor.com](https://cursor.com) → Download → install. Open it. Sign in with the **same email** as GitHub.
 3. **Vercel** — [vercel.com](https://vercel.com) → Sign up → **Continue with GitHub** (don't make a new account). Authorize it.
 
 ### Step 2 — Your first live URL
 
 We'll all do these together.
 
-1. On github.com → **New repo** → name it `my-vibe-site` → Public → ✓ "Add a README" → Create.
-2. In Cursor: `Cmd+Shift+P` → type `Git: Clone` → paste your repo URL → pick a folder.
-3. Open the chat (`Cmd+L`) and paste:
+1. In Cursor: **File → Open Folder** → make a new empty folder somewhere (call it `my-vibe-site`) → open it.
+2. Open the chat (`Cmd+L`) and paste:
 
-   > Create an `index.html` that says "Hello, [my name]" in big text on a fun gradient background. Centered, modern look. Plain HTML/CSS in one file.
+   > Build a basic website saying hello world in HTML, CSS and JavaScript.
 
-   Replace `[my name]` with your actual name. Hit enter. Accept the changes.
+   Hit enter. Accept the changes. You can use this as-is or modify in any way you want — make it say your name, pick a color, add a joke.
 
-4. Double-click `index.html` from your file explorer to open it in a browser. Looks good? ✓
-5. **Push it.** Cursor's Source Control sidebar (left edge) → hover the changed file → `+` to stage → type a commit message like `first page` → click ✓ Commit → click ⋯ → Push. First time Cursor will pop open a browser to log into GitHub — accept.
-6. **Deploy it.** vercel.com → Add New → Project → Import `my-vibe-site` → Deploy. Wait ~30 sec. Click the URL Vercel gives you.
+3. **Test it locally.** In Cursor's file explorer, right-click `index.html` → **Open in Browser** (or **Reveal in Finder** → double-click). Looks good? ✓
+4. **Publish to GitHub.** `Cmd+Shift+P` → type `Publish to GitHub` → pick **Publish to GitHub public repository** → confirm the repo name. First time, Cursor will pop a browser to connect your GitHub account — accept. It creates the repo and pushes your code automatically.
+5. **Deploy it.** vercel.com → Add New → Project → Import `my-vibe-site` → Deploy. Wait ~30 sec. Click the URL Vercel gives you.
 
    **That's your site, on the internet.** Send it to someone.
-### Step 3 — Feel the loop 
+### Step 3 — Feel the loop
 
-Run the loop once so it clicks. In Cursor:
+You just did the one-time setup. From now on, pushing a change uses the standard **stage → commit → push** flow. In Cursor:
 
-> Add a button that, when clicked, changes the gradient to a random new color combo.
+> Add a button that, when clicked, changes the background to a random new color.
 
-Save → Source Control → stage → commit `color button` → push. Wait 30 seconds. Refresh your live URL. **Your change is live for the whole internet.**
+Save. Then push the change — two ways to do it:
+
+- **Source Control sidebar** (left edge, branch icon): hover the changed file → `+` to stage → type a commit message like `color button` → click ✓ Commit → click ⋯ → Push.
+- **Command palette** (`Cmd+Shift+P`): `Git: Stage All Changes` → `Git: Commit` (enter message) → `Git: Push`.
+
+Wait 30 seconds. Refresh your live URL. **Your change is live for the whole internet.**
 
 That's the loop. Everything in Parts 2 and 3 is variations on it.
 
@@ -281,7 +285,7 @@ Edit in Cursor → Source Control: Stage → Commit → Push
                   Got an idea? GOTO 1
 ```
 
-**One-time per project:** create empty GitHub repo → clone in Cursor → build → commit + push → vercel.com → New Project → Import → Deploy. From then on, every push auto-deploys.
+**One-time per project:** open a new folder in Cursor → prompt for a starter → `Cmd+Shift+P` → `Publish to GitHub` → vercel.com → New Project → Import → Deploy. From then on, every push auto-deploys.
 
 ### Prompting principles
 
