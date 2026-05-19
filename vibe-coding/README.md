@@ -46,7 +46,7 @@ The most important class of the module. **One goal:** every student leaves with 
 
 Three accounts, one email. Use a **personal** email (you'll keep this past graduation).
 
-1. **GitHub** — [github.com](https://github.com) → Sign up. Pick a username. Verify your email.
+1. **GitHub** — [github.com](https://github.com) → Sign up. Pick a username you'd be okay seeing on a résumé (your name, not `xX_dragon420_Xx`). This is the URL of your portfolio for the next decade. Verify your email.
 2. **Cursor** — [cursor.com](https://cursor.com) → Download → install. Open it. Sign in with the **same email** as GitHub.
 3. **Vercel** — [vercel.com](https://vercel.com) → Sign up → **Continue with GitHub** (don't make a new account). Authorize it.
 
@@ -74,7 +74,7 @@ You just did the one-time setup. From now on, pushing a change uses the standard
 
 Save. Then push the change — two ways to do it:
 
-- **Source Control sidebar** (left edge, branch icon): hover the changed file → `+` to stage → type a commit message like `color button` → click ✓ Commit → click ⋯ → Push.
+- **Source Control sidebar** (left edge, branch icon): hover the changed file → `+` to stage → type a commit message like `Add color button` → click ✓ Commit → click ⋯ → Push.
 - **Command palette** (`Cmd+Shift+P`): `Git: Stage All Changes` → `Git: Commit` (enter message) → `Git: Push`.
 
 Wait 30 seconds. Refresh your live URL. **Your change is live for the whole internet.**
@@ -331,22 +331,21 @@ You can do all of this from Cursor's Source Control sidebar (no terminal needed)
 Don't pick one verbatim. Just ideas.
 
 ### AI-powered apps
-The AI isn't just your engineer — it can be a feature. Use the OpenAI / Anthropic / Gemini API (free tiers cover a demo) to build things that were impossible two years ago.
+The AI isn't just your engineer — it can be a feature. Use the OpenAI / Anthropic / Gemini API (free tiers cover a demo) to build things that were impossible two years ago. These will require an API key. Never put an API key in your HTML or JavaScript — anyone who visits your site can read it. These projects need a serverless function (a separate file in /api/) to hold the key. Ask Cursor to show you how.
 
 - **Roast my Spotify** — paste a playlist link → AI roasts (or compliments) your taste in the voice of Anthony Bourdain / Pitchfork / your strictest teacher.
-- **Anonymous compliment generator** — friend types your name, AI writes a heartfelt note in the voice of someone who knows them.
 - **AI rap battle** — pick two characters + a topic, get a 4-bar battle.
 - **Live closed-captions, but funny** — browser speech-to-text → AI rewrites it as Shakespeare / a sports announcer / a court reporter.
 - **An AI editor for one specific thing** — Common App essays, DMs that need help, your AP Lit thesis.
 - **"What would [character] say about my day?"** — paste your day, get a reaction in the voice you pick.
 
 ### Games with real depth
-Not single-screen clickers — games someone would actually finish.
+Not single-screen clickers.
 
 - **Real-time multiplayer drawing/guessing** with a friend over a shared URL (PeerJS handles peer-to-peer — no server).
 - **A platformer where you draw your own levels** mid-play.
 - **A physics sandbox** — drag objects, gravity + collisions + chain reactions.
-- **Chess against a real engine** (chess.js + stockfish). Custom theme — your cat is the king.
+- **Chess against a real engine** (chess.js + stockfish). Make a custom theme.
 - **Daily Wordle** with a custom word list and a shareable result image friends will actually post.
 
 ### Generative art, music, and creative tools
@@ -355,9 +354,6 @@ The browser is a canvas. The Web Audio API is a synthesizer. Both are wildly und
 - **Music sequencer** — tap a 16-step grid to compose a beat. Export the audio.
 - **Visual synthesizer** — your voice or a song controls a real-time visual.
 - **Drum machine where your voice is the kick** — record samples in browser, sequence them.
-- **Fractal explorer** — pan + zoom into the Mandelbrot set forever.
-- **3D scene you can walk around** (Three.js) — a floating island, your bedroom, your own planet.
-- **Lyric video generator** — paste lyrics + a beat → animated lyric video.
 - **Constellation viewer** — the actual sky over your location tonight.
 - **Generative [poetry / posters / jewelry]** — refresh the page, get something new and good.
 
@@ -373,15 +369,11 @@ Pull live data. Visualize it beautifully.
 - **1980s news ticker** — but it's live stock prices, crypto, or your friends' Instagram follow counts.
 
 ### Webcam + microphone experiments
-Sensor access is demo gold. Friends remember these.
 
 - **Webcam → ASCII / pixel art / glitch art** in real time.
-- **Face filter** — turn your face into a meme avatar or stick a moving mustache on it.
 - **Voice-controlled anything** — say "left," your character moves left. Browser speech recognition.
-- **Reaction-cam recorder** — records you watching a YouTube clip, plays them side by side.
 - **"Blink to advance"** slideshow / story / game.
 - **A live mood ring for your room** — listens, paints colors based on what it hears.
-- **Floating AR text** that follows your head around the screen.
 
 ### Tools that actually solve a real problem
 The bar: someone uses it within a week without you reminding them.
@@ -400,8 +392,5 @@ A page on the internet that says something only *you* would make.
 
 - **A digital time capsule** that unlocks on a future date.
 - **A senior yearbook page** every classmate adds a memory to (Google Sheet as the backend — no auth needed).
-- **A page that watches you back** — webcam tracks your face, the page reacts to where you look.
 - **A "send me a postcard"** page — visitors leave a 10-second audio clip + a doodle.
-- **A love letter** to a movie / a feeling / a place — designed like it belongs in a museum.
-- **A fake OS desktop** you can interact with — draggable windows, fake terminal, hidden apps.
 - **A spiritual successor to a website you loved as a kid** that no longer exists.
